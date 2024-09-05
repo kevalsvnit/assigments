@@ -1,23 +1,24 @@
-#include<stdio.h>
-//PROGRAM TO READ A CHARACTER AND CHECK WHETHER IT IS A SMALLCASE LETTER OR NOT USING CONDATIONAL OPERATOR.
-
-int main(){
-char ch;
-printf("\nenter any character\n");
-scanf("%c\n",&ch);
-
-if(ch>=97&&ch<=126){
-
-    printf("this is smallcase letter");
-}
-else if(ch>=65&&ch<=126){
-
-    printf("this is uppercase letter");
-}
-else{
-    printf("entered invalid character");
-}
+#include <stdio.h>
 
 
+int main() {
+    char ch;
+    scanf("%c", &ch);
 
+    int b;
+    b = (ch >= 'a' && ch <= 'z') ? 1 : (ch >= 'A' && ch <= 'Z') ? 2 : 0;
+
+    switch (b) {
+        case 1:
+            printf("Character is lowercase\n");
+            break;
+        case 2:
+            printf("Character is uppercase\n");
+            break;
+        default:
+            printf("Character is neither uppercase nor lowercase\n");
+            break;
+    }
+
+    return 0;
 }
